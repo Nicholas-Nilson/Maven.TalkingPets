@@ -27,7 +27,7 @@ public class Pet {
 
     public String speak() {
         // take another look at this;
-        return "...";
+        return "... what am I?!";
     }
 
 }
