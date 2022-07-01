@@ -4,11 +4,16 @@ package io.zipcoder.polymorphism;
 
 public class Pet {
 
+    //Instance Variables
     private String name;
-    private String petSounds;
 
     public Pet() {
         this.name = ""; //will update w/ generic names per sub-class.
+    }
+
+    //Constructor
+    public Pet(String name) {
+        this.name = name;
     }
 
     public void setPetName(String name) {
@@ -20,8 +25,9 @@ public class Pet {
         return name;
     }
 
-    public String petSpeak(Pet type) { // take another look at this
-        return type.petSounds;
+    public String speak() {
+        // take another look at this;
+        return "...";
     }
 
 }
