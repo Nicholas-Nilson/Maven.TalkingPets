@@ -44,10 +44,16 @@ public class PetQ {
         }
         }
 
-        //Asking User for Names of Pets
+        //Asking User for Names of Pets. Can also create the pets here.
+
+        int dogCount = 0;
+        int catCount = 0;
+        int duckCount =0;
         for (int pet : typeOfPet) {
             System.out.printf("What is pet #%d's name?\n", pet);
             nameOfPet.add(interviewer.next());
         }
+        System.out.println(typeOfPet);
+        System.out.println(nameOfPet);
     }
     }
