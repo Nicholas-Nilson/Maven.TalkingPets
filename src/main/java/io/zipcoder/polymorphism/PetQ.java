@@ -38,8 +38,8 @@ public class PetQ {
 //        }
 //    }
 
-    public static void main(String[] args) {
-
+    // public static void main(String[] args) {
+    public static void createPetStable() {
 
         //Number of Pets
          boolean gotPetNumber = false;
@@ -60,8 +60,7 @@ public class PetQ {
          }
 
         //Asking User to Specify Animal Types
-        // could use way to verify an input of 1, 2, or 3 was selected -_-.
-        // the method of removing indexes isn't working. may be better to use an array set to size numOfPets.
+
      if (numberOfPets > 0) {
 //         Integer[] typeOfPet = new Integer[numberOfPets]; //if changing code to methods, figure out how to define this.
          for (int i = 1; i <= numberOfPets; i++) {
@@ -90,28 +89,18 @@ public class PetQ {
          }
      }
 
-//        if (numberOfPets > 0) {   //before adding value check for types of animals available in the program.
-//            for (int i = 1; i <= numberOfPets; i++) {
-//                System.out.printf("What kind of animal is pet #%d?\n", i);
-//                System.out.println("Please Enter:");
-//                System.out.println("'1' for Dog");
-//                System.out.println("'2' for Cat");
-//                System.out.println("'3' for Duck");
-//                typeOfPet.add(interviewer.nextInt());
-//            }
-//        }
-
         //Asking User for Names of Pets. Can also create the pets here.
 
         int dogCount = 0;
         int catCount = 0;
         int duckCount = 0;
-        for (int pet : typeOfPet) {
-            System.out.printf("What is pet #%d's name?\n", pet);
+        for (int i = 1; i <= numberOfPets; i++) {
+            System.out.printf("What is pet #%d's name?\n", i);
             nameOfPet.add(interviewer.next());
         }
         System.out.println(typeOfPet);
         System.out.println(nameOfPet);
         petQComplete = true;
     }
+    public static void main(String[] args) {}
 }
