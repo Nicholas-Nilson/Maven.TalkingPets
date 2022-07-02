@@ -9,7 +9,7 @@ public class Console {
 
     private Integer petNumber;      // to display "you have # pet(s)!"
 //    private String petName;
-    private String[] petTypes = {"Dog", "Cat", "Duck"};
+    private String[] petTypes = {"Dog", "Cat", "Duck", "???"};
     private boolean powerState;
     private Scanner commandInput = new Scanner(System.in);
 
@@ -115,6 +115,12 @@ public class Console {
                                 System.out.printf("%s says %s!\n", duck.getPetName(), duck.speak());
                                 gotPetChoice = false;
                                 break;
+                            case 3:
+                                Pet pet = new Pet();
+                                pet.setPetName(StableBuilder.nameData.get(petChoice));
+                                System.out.printf("%s says %s!\n", pet.getPetName(), pet.speak());
+                                gotPetChoice = false;
+                                break;
                             default:
                                 System.out.println("Please enter a valid command");
                         }
@@ -150,6 +156,11 @@ public class Console {
                     Pet duck = new Duck();
                     duck.setPetName(StableBuilder.nameData.get(i));
                     System.out.printf("%s the %s says '%s!'\n", duck.getPetName(), petTypes[StableBuilder.typeData.get(i)], duck.speak());
+                    break;
+                case 3:
+                    Pet pet = new Pet();
+                    pet.setPetName(StableBuilder.nameData.get(i));
+                    System.out.printf("%s the %s says '%s!'\n", pet.getPetName(), petTypes[StableBuilder.typeData.get(i)], pet.speak());
                     break;
                 default:
                     System.out.println("Good Bye!");

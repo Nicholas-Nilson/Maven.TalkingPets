@@ -48,9 +48,10 @@ public class StableBuilder {
                 while (!gotPetType) {
                     System.out.printf("What kind of animal is pet #%d?\n", numberOfPets + 1);
                     System.out.println("Please Enter:");
-                    System.out.println("'1' for Dog");
-                    System.out.println("'2' for Cat");
-                    System.out.println("'3' for Duck");
+                    System.out.println("[1] for Dog");
+                    System.out.println("[2] for Cat");
+                    System.out.println("[3] for Duck");
+                    System.out.println("[4] for ???");
                     try {
                         petType = interviewer.nextInt();
                         numberData.add(numberOfPets);
@@ -59,7 +60,7 @@ public class StableBuilder {
                         interviewer.next();
                         continue;
                     }
-                    if (petType <= 0 || petType > 3) {
+                    if (petType <= 0 || petType > 4) {
                         System.out.println("Please enter a correct option.");
                         int lastIndex = numberData.size() - 1;
                         numberData.remove(lastIndex);
