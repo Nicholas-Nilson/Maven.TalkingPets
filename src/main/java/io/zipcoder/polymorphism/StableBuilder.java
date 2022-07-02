@@ -15,9 +15,9 @@ public class StableBuilder {
 //    private String petName;
 //    Map<Integer,String> petMap = new HashMap<Integer,String>();
   //  List<List<String>> stable = new ArrayList<List<String>>(); //ArrayList of ArrayLists that holds a string. x = pet, y = values.
-    public ArrayList<Integer> numberData = new ArrayList<Integer>();
-    public ArrayList<Integer> typeData = new ArrayList<Integer>();
-    public ArrayList<String> nameData = new ArrayList<String>();
+    public static ArrayList<Integer> numberData = new ArrayList<Integer>();
+    public static ArrayList<Integer> typeData = new ArrayList<Integer>();
+    public static ArrayList<String> nameData = new ArrayList<String>();
     Scanner interviewer = new Scanner(System.in);
 
     //Constructor  - shouldn't be necessary? Utility class to create animals.
