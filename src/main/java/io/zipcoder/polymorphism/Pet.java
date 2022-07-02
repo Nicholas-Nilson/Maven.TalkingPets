@@ -8,7 +8,7 @@ public class Pet {
     private String name;
 
     public Pet() {
-        this.name = ""; //will update w/ generic names per sub-class.
+        this.name = "Nemo"; //will update w/ generic names per sub-class.
     }
 
     //Constructor
