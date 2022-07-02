@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class StableBuilder {
 
     //Instance Variables
-    public int numberOfPets = 0;
+    public static Integer numberOfPets = 0;
 //    private int petType;
 //    private String petName;
 //    Map<Integer,String> petMap = new HashMap<Integer,String>();
@@ -18,14 +18,14 @@ public class StableBuilder {
     public static ArrayList<Integer> numberData = new ArrayList<Integer>();
     public static ArrayList<Integer> typeData = new ArrayList<Integer>();
     public static ArrayList<String> nameData = new ArrayList<String>();
-    Scanner interviewer = new Scanner(System.in);
+    static Scanner interviewer = new Scanner(System.in);
 
     //Constructor  - shouldn't be necessary? Utility class to create animals.
 
     //Method for creating animals..
 
     //will use a switch case for type of pet.
-    public void getPet() {
+    public static void getPet() {
         boolean gotPetType = false;
         int petType;
         while (!gotPetType) {
