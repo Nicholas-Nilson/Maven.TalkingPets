@@ -47,7 +47,7 @@ public class StableBuilder {
                 continue;
             }
             gotPetType = true;
-            typeData.add(petType);
+            typeData.add(petType -1);
         }
         System.out.println(("What is the name of this fine creature?"));
         nameData.add(interviewer.next());

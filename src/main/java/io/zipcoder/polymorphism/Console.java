@@ -46,7 +46,7 @@ public class Console {
                 if (numberOfPets > 0) {
                     System.out.printf("You have %d pet(s)!\n", numberOfPets);
                     for (int i = 0; i < numberOfPets; i++) {
-                        System.out.printf("%s the %s\n", StableBuilder.nameData.get(i), petTypes[i]);
+                        System.out.printf("%s the %s\n", StableBuilder.nameData.get(i), petTypes[StableBuilder.typeData.get(i)]);
                     }
                     System.out.println("[+] to add a pet | [i] to interact | [q] to quit");
                     command = commandInput.nextLine();
