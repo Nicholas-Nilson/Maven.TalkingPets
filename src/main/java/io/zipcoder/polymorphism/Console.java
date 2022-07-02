@@ -131,7 +131,28 @@ public class Console {
                             continue;
                     }
                         }
+            } //adding list of pets & what they say below. may break everything!
+        for (int i = 0; i <numberOfPets; i++) {
+            switch (StableBuilder.typeData.get(i)) {
+                case 0:
+                    Pet dog = new Dog();
+                    dog.setPetName(StableBuilder.nameData.get(i));
+                    System.out.printf("%s the %s says '%s!'\n", dog.getPetName(), petTypes[StableBuilder.typeData.get(i)], dog.speak());
+                    break;
+                case 1:
+                    Pet cat = new Cat();
+                    cat.setPetName(StableBuilder.nameData.get(i));
+                    System.out.printf("%s the %s says '%s!'\n", cat.getPetName(), petTypes[StableBuilder.typeData.get(i)], cat.speak());
+                    break;
+                case 2:
+                    Pet duck = new Duck();
+                    duck.setPetName(StableBuilder.nameData.get(i));
+                    System.out.printf("%s the %s says '%s!'\n", duck.getPetName(), petTypes[StableBuilder.typeData.get(i)], duck.speak());
+                    break;
+                default:
+                    System.out.println("Good Bye!");
             }
+        }
         }
     }
 

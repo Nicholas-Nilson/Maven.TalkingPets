@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ignore {
 
-    //code below is from other branch. to be incorporated to methods
+    //code below is from other branch. to be incorporated to methods.... got in over my head!
     //public class PetQ {
 
         //  //Should I have a method to fill in the variables? Or ... idk.. we're just trying to get the information here!

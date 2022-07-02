@@ -37,6 +37,7 @@ public class StableBuilder {
             try {
                 petType = interviewer.nextInt();
                 numberData.add(numberOfPets);
+                numberOfPets++;
             } catch (InputMismatchException e) {
                 System.out.println("Please enter a number.");
                 interviewer.next();
