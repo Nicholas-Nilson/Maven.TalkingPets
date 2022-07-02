@@ -44,6 +44,8 @@ public class StableBuilder {
             }
             if (petType <= 0 || petType > 3) {
                 System.out.println("Please enter a correct option.");
+                int lastIndex = numberData.size() -1;
+                numberData.remove(lastIndex);
                 continue;
             }
             gotPetType = true;
