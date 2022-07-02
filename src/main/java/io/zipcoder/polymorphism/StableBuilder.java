@@ -26,37 +26,56 @@ public class StableBuilder {
 
     //will use a switch case for type of pet.
     public static void getPet() {
-        boolean gotPetType = false;
-        int petType;
-        while (!gotPetType) {
-            System.out.printf("What kind of animal is pet #%d?\n", numberOfPets +1);
-            System.out.println("Please Enter:");
-            System.out.println("'1' for Dog");
-            System.out.println("'2' for Cat");
-            System.out.println("'3' for Duck");
-            try {
-                petType = interviewer.nextInt();
-                numberData.add(numberOfPets);
-                numberOfPets++;
-            } catch (InputMismatchException e) {
-                System.out.println("Please enter a number.");
-                interviewer.next();
-                continue;
+
+
+            boolean gotNumPetsToAdd = false;
+            int numberOfPetsToAdd = 0;
+            while (!gotNumPetsToAdd) {
+                System.out.println("How many pets would you like to add?");
+                try {
+                    numberOfPetsToAdd = interviewer.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("Please enter a number.");
+                    interviewer.next();
+                    continue;
+                }
+                gotNumPetsToAdd = true;
+                numberOfPets = numberOfPets + numberOfPetsToAdd;
             }
-            if (petType <= 0 || petType > 3) {
-                System.out.println("Please enter a correct option.");
-                int lastIndex = numberData.size() -1;
-                numberData.remove(lastIndex);
-                continue;
+            for (int i = 0; i < numberOfPetsToAdd; i++) {
+                boolean gotPetType = false;
+                int petType;
+                while (!gotPetType) {
+                    System.out.printf("What kind of animal is pet #%d?\n", numberOfPets + 1);
+                    System.out.println("Please Enter:");
+                    System.out.println("'1' for Dog");
+                    System.out.println("'2' for Cat");
+                    System.out.println("'3' for Duck");
+                    try {
+                        petType = interviewer.nextInt();
+                        numberData.add(numberOfPets);
+                    } catch (InputMismatchException e) {
+                        System.out.println("Please enter a number.");
+                        interviewer.next();
+                        continue;
+                    }
+                    if (petType <= 0 || petType > 3) {
+                        System.out.println("Please enter a correct option.");
+                        int lastIndex = numberData.size() - 1;
+                        numberData.remove(lastIndex);
+                        continue;
+                    }
+                    gotPetType = true;
+                    typeData.add(petType - 1);
+                }
+                System.out.println(("What is the name of this fine creature?"));
+                nameData.add(interviewer.next());
+
+                System.out.println(numberOfPets);
+                System.out.println(numberData);
+                System.out.println((typeData));
+                System.out.println((nameData));
             }
-            gotPetType = true;
-            typeData.add(petType -1);
-        }
-        System.out.println(("What is the name of this fine creature?"));
-        nameData.add(interviewer.next());
-        System.out.println(numberData);
-        System.out.println((typeData));
-        System.out.println((nameData));
     }
 }
 
